@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   XML Final
+   Transportation in NYC
+   Author: Jeremy Velarde
+   Date:   11/21/2016
+   File: travel.xml
+
+***TRAVELS - VARIOUS LOCATIONS AROUND NYC***
+-->
+<?xml-stylesheet type="text/xsl" href="travel.xsl" ?>
+
+<travels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:trvl="http://example.com/final/travel"
+	xsi:schemaLocation="http://example.com/final/travel travel.xsd">
+
+	<travelInfo>
+		<title> TOUR </title>
+		<pageDesc> Famous spots around NYC: </pageDesc>
+	</travelInfo>
+
+	<travel>
+		<attraction> Empire State Building </attraction>
+		<location> Midtown Manhattan </location>
+		<image>
+			<img src="images/empirestatebuilding.jpg" width="700" height="300"/>
+		</image>
+		<description>
+			<p> 
+				The Empire State Building features in many films, most notably the classic film 'King Kong' from 1933. Even today, though the building has been stripped from its title of the world's tallest building, it is a symbol of New York itself, visited by more than three million people each year. 
+			</p>
+		</description>
+	</travel>
+ 
+	<travel>
+		<attraction> World Trade Center</attraction>
+		<location> Lower Manhattan </location>
+		<image>
+			<img src="images/wtc.jpg" width="700" height="300"/>
+		</image>
+		<description> 
+			World Trade Center was previously most iconic for the twin towers, notoriously known for being subject to a bombing attack. The towers were then replaced by 'One World Trade Center,' which is the main building within the area. It is the tallest building in the Western Hemisphere, and the sixth-tallest in the world. 
+		</description>
+	</travel>
+
+	<travel>
+		<attraction> Times Square</attraction>
+		<location> Midtown Manhattan </location>
+		<image>
+			<img src="images/timessquare.jpg" width="700" height="300"/>
+		</image>
+		<description> 
+			Times Square is a major commercial intersection and neighborhood in Midtown Manhattan, New York City, at the junction of Broadway and Seventh Avenue, and stretching from West 42nd to West 47th Streets. Brightly adorned with billboards and advertisements, Times Square is sometimes referred to as The Crossroads of the World, The Center of the Universe, the heart of The Great White Way, and the "heart of the world". One of the world's busiest pedestrian intersections, it is also the hub of the Broadway Theater District and a major center of the world's entertainment industry. Times Square is one of the world's most visited tourist attractions, drawing an estimated 50 million visitors annually. Approximately 330,000 people pass through Times Square daily, many of them tourists, while over 460,000 pedestrians walk through Times Square on its busiest days. 
+		</description>
+	</travel>
+
+	<travel>
+		<attraction> Statue of Liberty</attraction>
+		<location> Liberty Island </location>
+		<image>
+			<img src="images/statueofliberty.jpg" width="700" height="300"/>
+		</image>
+		<description> 
+			The Statue of Liberty is situated in Upper New York Bay on Liberty Island south of Ellis Island, which together comprise the Statue of Liberty National Monument. Liberty Island is one of the islands that are part of the borough of Manhattan in New York.
+			No charge is made for entrance to the national monument, but there is a cost for the ferry service that all visitors must use, as private boats may not dock at the island. 
+		</description>
+	</travel>
+
+	<travel>
+		<attraction id="moma"> Museum of Modern Art </attraction>
+		<location> Midtown Manhattan </location>
+		<image>
+			<img src="images/moma.jpg" width="700" height="300"/>
+		</image>
+		<description> 
+			The Museum of Modern Art, also referred to as 'MoMA,' has been important in developing and collecting modernist art, and is often identified as one of the largest and most influential museums of modern art in the world. MoMA's collection offers an overview of modern and contemporary art, including works of architecture and design, drawing, painting, sculpture, photography, prints, illustrated books and artist's books, film, and electronic media. 
+		</description>
+	</travel>
+	<travel>
+		<attraction> Central Park </attraction>
+		<location> Midtown Manhattan - Upper Manhattan </location>
+		<image>
+			<img src="images/centralpark.jpg" width="700" height="300"/>
+		</image>
+		<description> 
+			Central Park is an urban park in middle-upper Manhattan, within New York City. Central Park is the most visited urban park in the United States, with 40 million visitors in 2013. It is also one of the most filmed locations in the world.
+		</description>
+	</travel>
+
+</travels>

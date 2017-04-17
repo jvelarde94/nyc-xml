@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   XML Final
+   Transportation in NYC
+   Author: Jeremy Velarde
+   Date:   11/21/2016
+   File: prices.xml
+-->
+<?xml-stylesheet type="text/xsl" href="pricing.xsl" ?>
+
+<pricings xmlns:xsi="http://www.w3.org/4001/XMLSchema-instance"
+	xmlns:prc="http://example.com/final/pricing"
+	xsi:schemaLocation="http://example.com/final/pricing pricing.xsd">
+
+	<pricingInfo>
+		<title> PRICING </title>
+		<description> Hotel Pricing and Admission Fees </description>
+	</pricingInfo>
+
+	<pricing>
+		<spot>
+			<sName>Musem of Modern Art</sName>
+			<sCost>25</sCost>
+		</spot>
+		<hotel>
+			<hName>Warwick New York</hName>
+			<hCost>206</hCost>
+			<hRating>4.3</hRating>
+			<hImage>
+				<img src="images/warwickHotel.jpg" width="600" height="400"/>
+			</hImage>
+		</hotel>
+		<nearRestaurant>Connolly's Pub and Restaurant</nearRestaurant>
+		<pubTravel>Bus, Subway</pubTravel>
+		<priTravel>CitiBike, Taxi, Uber, Walk</priTravel>
+	</pricing>
+	
+	<pricing>
+		<spot>
+			<sName>Times Square</sName>
+			<sCost>Free</sCost>
+		</spot>
+		<hotel>
+			<hName>Renaissance New York Times Square Hotel</hName>
+			<hCost>239</hCost>
+			<hRating>4.2</hRating>
+			<hImage>
+				<img src="images/renaissanceHotel.jpg" width="600" height="400"/>
+			</hImage>
+		</hotel>
+		<nearRestaurant>Langan's Pub and Restaurant</nearRestaurant>
+		<pubTravel>Bus, Subway</pubTravel>
+		<priTravel>CitiBike, Taxi, Uber, Walk</priTravel>
+	</pricing>
+	
+	<pricing>
+		<spot>
+			<sName>Central Park</sName>
+			<sCost>Free</sCost>
+		</spot>
+		<hotel>
+			<hName>Park Lane Hotel New York</hName>
+			<hCost>299</hCost>
+			<hRating>3.8</hRating>
+			<hImage>
+				<img src="images/parklaneHotel.jpg" width="600" height="400"/>
+			</hImage>
+		</hotel>
+		<nearRestaurant>The Plaza Food Hall</nearRestaurant>
+		<pubTravel>Bus, Subway</pubTravel>
+		<priTravel>CitiBike, Taxi, Uber, Walk</priTravel>
+	</pricing>
+	
+	<pricing>
+		<spot>
+			<sName>World Trade Center</sName>
+			<sCost>28</sCost>
+		</spot>
+		<hotel>
+			<hName>World Center Hotel</hName>
+			<hCost>152</hCost>
+			<hRating>4.3</hRating>
+			<hImage>
+				<img src="images/worldcenterHotel.jpg" width="600" height="400"/>
+			</hImage>
+		</hotel>
+		<nearRestaurant>Bill's Bar and Burger</nearRestaurant>
+		<pubTravel>Bus, Subway</pubTravel>
+		<priTravel>CitiBike, Taxi, Uber, Walk</priTravel>
+	</pricing>
+	
+	<pricing>
+		<spot>
+			<sName>Empire State Building</sName>
+			<sCost>34</sCost>
+		</spot>
+		<hotel>
+			<hName>Hotel 373 Fifth Avenue</hName>
+			<hCost>99</hCost>
+			<hRating>3.8</hRating>
+			<hImage>
+				<img src="images/373Hotel.jpg" width="600" height="400"/>
+			</hImage>
+		</hotel>
+		<nearRestaurant>STATE Bar and Grill</nearRestaurant>
+		<pubTravel>Bus, Subway</pubTravel>
+		<priTravel>CitiBike, Taxi, Uber, Walk</priTravel>
+	</pricing>
+
+	<pricing>
+		<spot>
+			<sName>Statue of Liberty</sName>
+			<sCost>18</sCost>
+		</spot>
+		<hotel>
+			<hName>DoubleTree by Hilton Hotel NYC Financial District</hName>
+			<hCost>143</hCost>
+			<hRating>3.8</hRating>
+			<hImage>
+				<img src="images/doubletreeHotel.jpg" width="600" height="400"/>
+			</hImage>
+		</hotel>
+		<nearRestaurant>The Dead Rabbit</nearRestaurant>
+		<pubTravel>Ferry</pubTravel>
+	</pricing>
+	
+</pricings>

@@ -1,0 +1,138 @@
+/*
+   XML Final
+   Transportation in NYC 
+   Author: Jeremy Velarde
+   Date:   11/21/2016
+   File: style.css
+*/
+head{
+	text-align: center;
+}
+body{
+  background-color: #fdfdf8;
+	text-align: center;
+  font-size: 20px;
+}
+body h1{
+	text-align:Verdana, Geneva, sans-serif;
+  font-size: 60px;
+  text-shadow: 1px 1px;
+  color: white;
+}
+body h2{
+  text-shadow: 1px 1px;
+}
+
+#titleHome{
+    border-style: solid;
+    border-width: medium;
+	margin-right: 350px;
+	margin-left: 350px;
+	background-image: url("images/skyline.jpg");
+}
+
+#titleTravel{
+    border-style: solid;
+    border-width: medium;
+	margin-right: 350px;
+	margin-left: 350px;
+	background-image: url("images/travelbanner.jpg");
+}
+
+#titlePricing{
+    border-style: solid;
+    border-width: medium;
+	margin-right: 350px;
+	margin-left: 350px;
+	background-image: url("images/hotel.jpg");
+}
+
+.navbar{
+	width: 100%;
+}
+.navbar ul{
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #dedede;
+  font-weight: bold;
+}
+.navbar li{
+	display: inline-block;
+}
+.navbar li a{
+    display: block;
+    font-size: 20px;
+    color: #000;
+    padding: 20px 35px;
+    text-decoration: none;
+}
+/* Color when hovering over buttons on nav bar*/
+.navbar li a:hover {
+    background-color: rgb(182, 209, 218);
+    color: white;
+    transition: 0.3s;
+}
+
+/* id for placement on index page with scrollbar*/
+#container {
+    margin-right: 50px;
+    margin-left: 10px;
+	padding: 50px;
+    white-space:nowrap;
+    overflow-x:auto;
+}
+
+/*class for accordion on travel page*/
+.accordion {
+    background-color: #dedede;
+    color: #444;
+    cursor: pointer;
+    padding: 2px;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    transition: 0.3s;
+    margin: 2px;
+}
+.accordion.active, .accordion:hover {
+    background-color: #ACC5CE; 
+	color: white
+}
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #D4E3E9;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.panel.show {
+    display: block;
+}
+/* for aligning description under image description on travel page */
+#alignDesc{
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  }
+
+/*cotainer for pricing page*/
+.pContainer{
+  margin-right: 50px;
+  margin-left: 10px;
+  padding: 50px;
+  display: inline-block;
+}
+/*table for pricings page*/
+ #pricingTable {
+   font-size: .85em;
+   margin-top: 10px;
+   border: 1px solid black;
+   border-collapse: collapse;
+   display: inline-block;
+   max-width: 400px;
+}
+#pricingTable th, td{
+  border: 1px solid grey;
+  padding: 5px;
+}

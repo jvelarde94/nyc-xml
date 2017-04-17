@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+   Schema for publicprivate.xml and private.xml
+   Author: Jeremy Velarde
+   Date:   10/20/2016
+   File: private.xsd
+   REQ. 10
+-->      
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://example.com/transportation/private" 
+	targetNamespace="http://example.com/transportation/private"
+	elementFormDefault="qualified">
+<!-- REQ. 8 -->
+
+	<xs:element name="method" type="xs:string" />
+	<xs:element name="location" type="xs:string" />
+	<xs:element name="destination" type="xs:string" />
+	<xs:element name="eta" type="xs:string" />
+	
+	<xs:element name="privateTransportation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="transportation" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="transportation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="transport" />
+				<xs:element ref="location" />
+				<xs:element ref="destination" />
+				<xs:element ref="eta" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="transport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

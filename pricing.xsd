@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   XML Final
+   Transportation in NYC
+   Author: Jeremy Velarde
+   Date:   11/21/2016
+   File: pricing.xsd
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://example.com/final/pricing"
+	targetNamespace="http://example.com/final/pricing"
+	elementFormDefault="qualified">
+
+	<xs:element name="title" type="xs:string"/>
+	<xs:element name="description" type="xs:string"/>
+	<xs:element name="sName" type="xs:string"/>
+	<xs:element name="sCost" type="xs:string"/>
+	<xs:element name="hName" type="xs:string"/>
+	<xs:element name="hCost" type="xs:string"/>
+	<xs:element name="hRating" type="xs:string"/>
+	<xs:element name="nearRestaurant" type="xs:string"/>
+	<xs:element name="pubTravel" type="xs:string"/>
+	<xs:element name="priTravel" type="xs:string"/>
+	<xs:attribute name="src" type="srcType" />
+
+	<xs:element name="pricings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pricingInfo"/>
+				<xs:element name="pricing" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="pricingInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title"/>
+				<xs:element ref="description"/>
+				</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="pricing">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="spot"/>
+				<xs:element ref="hotel"/>
+				<xs:element ref="nearRestaurant"/>
+				<xs:element ref="pubTravel"/>
+				<xs:element ref="priTravel" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="spot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sName"/>
+				<xs:element ref="sCost"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="hotel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="hName"/>
+				<xs:element ref="hCost"/>
+				<xs:element ref="hRating"/>
+				<xs:element ref="hImage" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="hImage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="img" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="img">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="src" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   XML Final
+   Transportation in NYC
+   Author: Jeremy Velarde
+   Date:   11/21/2016
+   File: index.xml
+-->
+<?xml-stylesheet type="text/xsl" href="index.xsl" ?>
+
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:indx="http://example.com/final/index"
+	xsi:schemaLocation="http://example.com/final/index index.xsd">
+
+	<home>
+		<title> TRAVEL NYC </title>
+		<description> 
+			Find popular locations and pricing in New York City. 
+		</description>
+		<images>
+			<img src="images/statueofliberty.jpg" width="400" height="200" />
+			<img src="images/centralpark.jpg" width="400" height="200"/>
+			<img src="images/halal.jpg" width="400" height="200" />
+			<img src="images/empirestatebuilding.jpg" width="400" height="200" />
+			<img src="images/moma.jpg" width="400" height="200" />
+			<img src="images/wtc.jpg" width="400" height="200" />
+			<img src="images/timessquare.jpg" width="400" height="200" />
+			<img src="images/gz.jpg" width="400" height="200" />
+		</images>
+	</home>
+
+</index>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"  standalone="yes" ?>
+<!--
+XML MIDTERM
+   Schema for publicprivate.xml
+   Author: Jeremy Velarde
+   Date:   10/20/2016
+   File: public.xsd
+   REQ. 5
+-->      
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://example.com/transportation/public"
+	targetNamespace="http://example.com/transportation/public"
+	xmlns:pri="http://example.com/transportation/private"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- REQ. 8 -->
+	<!-- provided prefix "pri" -->
+	
+	<xs:import namespace="http://example.com/transportation/private"
+			schemaLocation="private.xsd" />
+	<!-- IMPORT PRIVATE.XSD SCHEMA TO APPLY TO INSTANCE DOCUMENT -->
+
+	<xs:attribute name="type" type="trainType" />
+	<xs:attribute name="direction" type="directionType" />
+	<xs:element name="method" type="xs:string" />
+	<xs:element name="location" type="xs:string" />
+	<xs:element name="destination" type="xs:string" />
+	<xs:element name="trainFrom" type="xs:string" />
+	<xs:element name="trainTo" type="xs:string" />
+	<xs:element name="direction" type="xs:string" />
+ 
+	<xs:simpleType name="trainType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="peak"/>
+			<xs:enumeration value="offpeak"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="directionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="east"/>
+			<xs:enumeration value="west"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="transportations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="transportation" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="pri:privateTransportation" /> <!--add referece to root element to allow referenced element to be used -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="transportation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="transport" />
+				<xs:element ref="location" />
+				<xs:element ref="destination" />
+				<xs:element ref="train" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="subway" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="transport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="method" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+				
+	<xs:element name="train">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="trainFrom" />
+				<xs:element ref="trainTo" />
+			</xs:sequence>
+			<xs:attribute ref="type" />
+			<xs:attribute ref="direction" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="subway">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="direction" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
